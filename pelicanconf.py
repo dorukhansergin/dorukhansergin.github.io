@@ -6,43 +6,41 @@ import datetime
 ## THINGS TO CONFIGURE
 ## ---------------------------------------------------------------------
 
-AUTHOR = u'A blog-o-matic user'
-SITENAME = u'My personal blog with blog-o-matic'
-SITESUBTITLE = u'This is where I do test things'
+AUTHOR = u'Dorukhan'
+SITENAME = u'Dorukhan\'s Blog'
+# SITESUBTITLE = u'This is where I do test things'
 SITEURL = u'/'
 DEFAULT_LANG = u'en'
 DEFAULT_CATEGORY = 'blog'
-CLAIM_GOOGLE = "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
-CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
+# CLAIM_GOOGLE = "Bk4Z5ucHLyPXqlZlj5LzANpYBBSvxqBW4E8i-Kwf-bQ"
+# CLAIM_BING = "8FF1B025212A47B5B27CC47163A042F0"
 
 
-LANDING_PAGE_ABOUT = {'title': 'My blog',
+LANDING_PAGE_ABOUT = {'title': 'Welcome to Dorukhan\'s Personal/Research Blog',
                       'details': """<p>This website contains Info that might be interesting for you, enjoy!</p>"""}
 
 
-PROJECTS = [{'name': 'Blog-o-matic', 'url': 'https://github.com/iranzo/blog-o-matic',
-             'description': 'Canned blog automation for quickly setting up a blog with Pelican'},
-            {'name': 'Citellus', 'url': 'https://citellus.org',
-             'description': 'Troubleshooting automation tool with easy to contribute rules'},
-            {'name': 'Pablo Iranzo Blog', 'url': 'https://iranzo.github.io',
-             'description': 'Other projects at Github website'},
-            {'name': 'Redken Telegram BOT', 'url': 'https://t.me/redken_bot',
-             'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'}]
+# PROJECTS = [{'name': 'Blog-o-matic', 'url': 'https://github.com/iranzo/blog-o-matic',
+#              'description': 'Canned blog automation for quickly setting up a blog with Pelican'},
+#             {'name': 'Citellus', 'url': 'https://citellus.org',
+#              'description': 'Troubleshooting automation tool with easy to contribute rules'},
+#             {'name': 'Pablo Iranzo Blog', 'url': 'https://iranzo.github.io',
+#              'description': 'Other projects at Github website'},
+#             {'name': 'Redken Telegram BOT', 'url': 'https://t.me/redken_bot',
+#              'description': 'A Telegram bot with support for Karma, RSS Feeds, Quotes, etc'}]
 
 
-LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
-         ('RHJobs channel on TG', "https://t.me/rhjobs"),)
+# LINKS = (('Redken on telegram', 'https://t.me/redken_bot'),
+#          ('RHJobs channel on TG', "https://t.me/rhjobs"),)
 
 # Keep 'name' like 'twitter' with what 'FontAwesome has for putting the right icon'
 
-SOCIAL = (('Twitter', 'http://twitter.com/iranzop'),
-          ('github', 'http://github.com/iranzo'),
-          ('linkedin', 'https://www.linkedin.com/in/iranzo/'),)
+SOCIAL = (('github', 'http://github.com/dorukhansergin'),
+          ('linkedin', 'https://linkedin.com/in/dorukhansergin/'),)
+        #   ('Twitter', 'http://twitter.com/iranzop')
 
 
 # TWITTER_USERNAME = "fillit"
-# Update if you use amazon links
-AMAZON_ONELINK = "23824450-ef77-4537-9259-8590465886f1"
 
 # GOOGLE_ANALYTICS tracking ID
 # GOOGLE_ANALYTICS = "UA-81705-12"
@@ -69,7 +67,7 @@ PHOTO_THUMB = (192, 144, 60)
 PHOTO_SQUARE_THUMB = False
 PHOTO_RESIZE_JOBS = 5
 PHOTO_WATERMARK = True
-PHOTO_WATERMARK_TEXT = "© Pablo Iranzo Gómez (https://iranzo.github.io)"
+PHOTO_WATERMARK_TEXT = "© Nurettin Dorukhan Sergin (https://dorukhansergin.github.io)"
 PHOTO_WATERMARK_IMG = ''
 PHOTO_EXIF_KEEP = False
 PHOTO_EXIF_REMOVE_GPS = True
@@ -81,7 +79,7 @@ PHOTO_EXIF_COPYRIGHT = 'COPYRIGHT'
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Madrid'
+TIMEZONE = 'America/Phoenix'
 
 # Put as draft content in the future
 WITH_FUTURE_DATES = False
