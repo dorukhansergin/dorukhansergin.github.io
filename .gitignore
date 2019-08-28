@@ -2,3 +2,5 @@ output/
 .peru/
 plugins/
 themes/
+__pycache__/
+*.pid

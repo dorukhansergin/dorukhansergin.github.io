@@ -111,11 +111,12 @@ LOAD_CONTENT_CACHE = False
 PLUGIN_PATHS = ['plugins']
 
 PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img',
-           'neighbors', 'render_math', 'related_posts', 'share_post',
+           'neighbors', 'render_math', 'related_posts',
            'series', 'assets', 'post_stats', 'revealmd', 'photos']
 
            # 'better_codeblock_line_numbering'
            # 'better_figures_and_images'
+           # 'share_post'
 
 THEME = 'themes/elegant'
 
