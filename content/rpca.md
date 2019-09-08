@@ -88,11 +88,11 @@ Sparse errors $S$ then become moving objects.
 
 Here is a [royalty free airport camera footage](https://www.youtube.com/watch?v=-R4ezN3P210&list=PLlqpQlFpfxoolFzAs6n1s36WoLHmSFcRU&index=23) I grabbed from YouTube.
 
-![airplanes](./images/rpca/airplanes.gif)
+![airplanes]({filename}/images/rpca/airplanes.gif)
 
 By applying robust PCA, we can easily dissect it into background and the moving object (in this case, the truck and a couple of planes to the very right of the frame through the end of the video).
 
-![airplanes-background](./images/rpca/airplanes-background.gif)
+![airplanes-background]({filename}/images/rpca/airplanes-background.gif)
 
 ![airplanes-obj](./images/rpca/airplanes-obj.gif)
 

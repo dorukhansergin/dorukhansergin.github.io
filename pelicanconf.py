@@ -205,7 +205,7 @@ PAGINATION_PATTERNS = (
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
 
-
+STATIC_PATHS = ['images', 'pdfs']
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
