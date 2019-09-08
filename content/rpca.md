@@ -10,7 +10,7 @@ lang: en
 status: published
 ---
 
-# From PCA to Robust-PCA
+## From PCA to Robust PCA
 
 PCA is widely known by its geometric interpretation. 
 That is, finding successive orthonormal vectors to project the data onto, such that the reprojected variance is kept at a maximum.
@@ -83,3 +83,23 @@ While there are many application one can think of, I find video surveillance to 
 As explained in Candes *et al.*, $L$ is what a fixed surveillance camera sees, you can call it the *background* if you will.
 It is low-rank since over many frames, the background stays the same and thus we have correlation among samples (also possibly among pixels as it is common in images).
 Sparse errors $S$ then become moving objects.
+
+# Robust PCA in Action
+
+Here is a [royalty free airport camera footage](https://www.youtube.com/watch?v=-R4ezN3P210&list=PLlqpQlFpfxoolFzAs6n1s36WoLHmSFcRU&index=23) I grabbed from YouTube.
+
+![airplanes](./images/rpca/airplanes.gif)
+
+By applying robust PCA, we can easily dissect it into background and the moving object (in this case, the truck and a couple of planes to the very right of the frame through the end of the video).
+
+![airplanes-background](./images/rpca/airplanes-background.gif)
+
+![airplanes-obj](./images/rpca/airplanes-obj.gif)
+
+Had we have done it with PCA? Well...
+
+![airplanes-background-pca](./images/rpca/airplanes-background-pca.gif)
+
+![airplanes-obj-pca](/Users/dorukhansergin/Research/blog_code/airplanes-obj-pca.gif)
+
+I guess it's good for making viral ghost footage videos.
