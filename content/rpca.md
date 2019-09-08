@@ -94,12 +94,12 @@ By applying robust PCA, we can easily dissect it into background and the moving 
 
 ![airplanes-background]({filename}/images/rpca/airplanes-background.gif)
 
-![airplanes-obj](./images/rpca/airplanes-obj.gif)
+![airplanes-obj]({filename}/images/rpca/airplanes-obj.gif)
 
 Had we have done it with PCA? Well...
 
-![airplanes-background-pca](./images/rpca/airplanes-background-pca.gif)
+![airplanes-background-pca]({filename}/images/rpca/airplanes-background-pca.gif)
 
-![airplanes-obj-pca](/Users/dorukhansergin/Research/blog_code/airplanes-obj-pca.gif)
+![airplanes-obj-pca]({filename}/images/rpca/airplanes-obj-pca.gif)
 
 I guess it's good for making viral ghost footage videos.
