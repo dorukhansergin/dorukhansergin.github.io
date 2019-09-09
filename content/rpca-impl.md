@@ -39,9 +39,6 @@ ADMM propses an iterative approach using the Lagrangian.
 Say we are at iteration $k$ and we are given from previous iteration $X^k, Z^k, Y^k$.
 The required iterations for step $k+1$ will become:
 $$
-\DeclareMathOperator*{\argmax}{arg\max}
-\DeclareMathOperator*{\argmin}{argmin}
-
 \begin{equation*}
 \begin{aligned}
 	X^{k+1} &= \underset{X}{\mathrm{argmin}}\mathcal{L}(X, Z^k, Y^k) \\
