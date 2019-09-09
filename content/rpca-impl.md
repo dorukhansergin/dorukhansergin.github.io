@@ -31,24 +31,21 @@ The augmented Lagrangian looks like this:
 $$
 \mathcal{L}(X, Z, Y) = f(X) + g(Z) + \langle Y,C-AX-BZ\rangle + \frac{\mu}{2}\|C-AX-BZ\|_F^2
 $$
-
->  If you feel the need to understand how we got here, I suggest reading the second chapter of [Boyd *et al*'s classic report](https://stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf) on this.
->  
+ If you feel the need to understand how we got here, I suggest reading the second chapter of [Boyd *et al*'s classic report](https://stanford.edu/~boyd/papers/pdf/admm_distr_stats.pdf) on this.
 
 ADMM propses an iterative approach using the Lagrangian.
-Say we are at iteration $k$ and we are given from previous iteration $X^k, Z^k, Y^k$.
+Say we are at iteration $k$ and we are given from previous iteration $X^k$, $Z^k$, $Y^k$.
 The required iterations for step $k+1$ will become:
 $$
-\begin{equation*}
 \begin{aligned}
 	X^{k+1} &= \underset{X}{\mathrm{argmin}}\mathcal{L}(X, Z^k, Y^k) \\
 	Z^{k+1} &= \underset{Z}{\mathrm{argmin}}\mathcal{L}(X^{k+1}, Z, Y^k) \\
 	Y^{k+1} &= Y^k + \mu(C-AX^{k+1}-BZ^{k+1}) 
-
 \end{aligned}
-\end{equation*}
 $$
-If you have a closed form solution for the update of $X^{k+1}$ and $Z^{k+1}$, you're in good luck.
+
+
+If you have a closed form solution for the updates of $X^{k+1}$ and $Z^{k+1}$, you're in good luck.
 
 ADMM can be thought of as a tug-of-war between optimality gap and feasibility of the primal problem.
 This can be used to set up a systematic way to early stop the algorithm and/or play around with $\mu$ over iterations.

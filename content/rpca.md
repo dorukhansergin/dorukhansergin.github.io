@@ -87,18 +87,18 @@ Here is a [royalty free airport camera footage](https://www.youtube.com/watch?v=
 It fits my definition above, since the camera is fixed at a location and it doesn't rotate around.
 There are a few *sparse* objects moving around.
 
-![airplanes]({filename}/images/rpca/airplanes.gif)
+![airplanes]({static}/images/rpca/airplanes.gif)
 
 By applying robust PCA, I could easily separate background from the moving object (in this case, the truck and a couple of planes to the very right of the frame through the end of the video).
 
-![airplanes-background]({filename}/images/rpca/airplanes-background.gif)
+![airplanes-background]({static}/images/rpca/airplanes-background.gif)
 
-![airplanes-obj]({filename}/images/rpca/airplanes-obj.gif)
+![airplanes-obj]({static}/images/rpca/airplanes-obj.gif)
 
 Had we have done it with PCA? Well...
 
-![airplanes-background-pca]({filename}/images/rpca/airplanes-background-pca.gif)
+![airplanes-background-pca]({static}/images/rpca/airplanes-background-pca.gif)
 
-![airplanes-obj-pca]({filename}/images/rpca/airplanes-obj-pca.gif)
+![airplanes-obj-pca]({static}/images/rpca/airplanes-obj-pca.gif)
 
 I guess it's good for making viral ghost footage videos.
