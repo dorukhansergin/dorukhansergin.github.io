@@ -10,13 +10,11 @@ lang: en
 status: published
 ---
 
-## From PCA to Robust PCA
-
 PCA is widely known by its geometric interpretation. 
 That is, finding successive orthonormal vectors to project the data onto, such that the reprojected variance is kept at a maximum.
 Here is another way to look at PCA.
 Let's say you have a data matrix $M$.
-You believe that there exists a low-rank matrix $L$--- whose rank is less than $r$--- if some noise is stripped out of $M$.
+You believe that there exists a low-rank matrix $L$--whose rank is less than $r$-- if some noise is stripped out of $M$.
 
 This can be formulated as an optimization problem, where you try to find a matrix $L$ that gives you the best low-rank approximation of $M$.
 $$
@@ -43,7 +41,7 @@ If you are like me and prefer the probabilistic view of PCA, this means that you
 But what if it wasn't? 
 
 Candes *et al.* raise this question in their [2011 paper](https://dl.acm.org/citation.cfm?id=1970395).
-In their own words, if the data is *grossly* corrupted in sparse regions, then $\|M -L\|_F^2$ is not an appropriate objective anymore.
+In their own words, if the data is *grossly* corrupted in *sparse* regions, then $\|M -L\|_F^2$ is not an appropriate objective anymore.
 Okay then, how about we change it to $\|M -L\|_1$?
 On paper, this seems perfect but we don't have the Eckart-Young-Mirsky theorem for this case.
 Let's take a step forward and don't make any assumptions on what rank $r$ will be, but rather just try to minimize it as much as we can.
@@ -68,7 +66,7 @@ A refresher, the 0-"norm" (in quotation marks because it's not really a norm) is
 Nuclear norm uses the 1-norm, which is the tightest convex relaxation of the 0-"norm", $\|L\|_* = \|\sigma(L)\|_1$.
 It is very useful in practice, and as we'll see in other posts, opens up a plethora of applications where the eventual goal is to find a low-rank approximation of the data at hand.
 
-Consequently, our minimaztion problem becomes:
+Consequently, our minimaztion problem becomes a convex optimization problem:
 $$
 \begin{equation*}
 \begin{aligned}   
@@ -76,21 +74,22 @@ $$
 $$
 This problem defines what we call today, robust PCA. 
 It can be solved efficiently via Alternating Direction Method of Multipliers (ADMM).
-Interested readers can check [an entire webpage](http://stanford.edu/~boyd/papers/admm_distr_stats.html) dedicated for this method and what it can do.
 
 We saved the best question to the last: why would you want to use robust PCA for?
-While there are many application one can think of, I find video surveillance to be the easily imaginable.
-As explained in Candes *et al.*, $L$ is what a fixed surveillance camera sees, you can call it the *background* if you will.
-It is low-rank since over many frames, the background stays the same and thus we have correlation among samples (also possibly among pixels as it is common in images).
-Sparse errors $S$ then become moving objects.
+While there are many applications one can think of, I find background-foreground separation in video surveillance to be the easiest to imagine.
+If frames captured by our camera is stored in a matrix $M$ (frames by pixels), then $L$ is the medium the camera looks at, *background*.
+It is low-rank since over many frames, the background stays the same and thus we have correlation among frames (also possibly among pixels as it is common in images).
+Sparse errors $S$ then becomes moving objects, or the *foreground*.
 
 # Robust PCA in Action
 
 Here is a [royalty free airport camera footage](https://www.youtube.com/watch?v=-R4ezN3P210&list=PLlqpQlFpfxoolFzAs6n1s36WoLHmSFcRU&index=23) I grabbed from YouTube.
+It fits my definition above, since the camera is fixed at a location and it doesn't rotate around.
+There are a few *sparse* objects moving around.
 
 ![airplanes]({filename}/images/rpca/airplanes.gif)
 
-By applying robust PCA, we can easily dissect it into background and the moving object (in this case, the truck and a couple of planes to the very right of the frame through the end of the video).
+By applying robust PCA, I could easily separate background from the moving object (in this case, the truck and a couple of planes to the very right of the frame through the end of the video).
 
 ![airplanes-background]({filename}/images/rpca/airplanes-background.gif)
 
